@@ -12,7 +12,7 @@ This project explores historical baseball data using SQL to investigate four are
 - **Player Career Analysis** — examining player age, career length, and team history.
 - **Player Comparison Analysis** — comparing player characteristics and identifying trends over time.
 
-The project demonstrates how SQL can be used to analyze relational data and answer analytical questions using MySQL.
+The project demonstrates how SQL can be used to explore relational data, perform multi-step analysis, and answer analytical questions using MySQL.
 
 ## Tools Used
 
@@ -29,19 +29,23 @@ The analysis uses several related tables, including:
 - `salaries`
 - `players`
 
-## Analysis
+---
 
-### 1. School Analysis
+## 1. School Analysis
 
-This section examines the schools associated with professional baseball players.
+This analysis examines the schools associated with professional baseball players.
 
-Questions explored include:
+### Questions explored
 
 - How many schools produced players in each decade?
 - Which five schools produced the most players?
 - Which three schools produced the most players in each decade?
 
-**SQL techniques demonstrated:**
+### Key finding
+
+Among the top five schools, the University of Texas at Austin produced the most players with **107**, followed by the University of Southern California with **105**.
+
+### SQL techniques
 
 - `LEFT JOIN`
 - `GROUP BY`
@@ -50,17 +54,27 @@ Questions explored include:
 - `ROW_NUMBER()`
 - Aggregation and ranking
 
-### 2. Salary Analysis
+### Result
 
-This section examines team salary spending over time.
+![School Analysis](screenshots/school_analysis.png)
 
-Questions explored include:
+---
+
+## 2. Salary Analysis
+
+This analysis examines team salary spending and cumulative expenditure over time.
+
+### Questions explored
 
 - Which teams were in the top 20% based on average annual spending?
 - What was each team's cumulative spending over the years?
 - In which year did each team's cumulative spending first exceed $1 billion?
 
-**SQL techniques demonstrated:**
+### Key finding
+
+Among the teams in the top 20% by average annual spending, **SFG** had the highest average annual spending at approximately **$143.5 million**, followed by **LAA at $118.5 million** and **NYA at $109.4 million**.
+
+### SQL techniques
 
 - Common Table Expressions (CTEs)
 - `SUM()`
@@ -70,11 +84,17 @@ Questions explored include:
 - Running totals
 - `ROW_NUMBER()`
 
-### 3. Player Career Analysis
+### Result
 
-This section examines player careers using biographical and salary data.
+![Salary Analysis](screenshots/salary_analysis.png)
 
-Questions explored include:
+---
+
+## 3. Player Career Analysis
+
+This analysis examines player careers using biographical and salary data.
+
+### Questions explored
 
 - How many players are in the dataset?
 - How old were players when they began and ended their careers?
@@ -82,7 +102,7 @@ Questions explored include:
 - Which teams did players play for in their starting and ending years?
 - Which players started and ended with the same team while playing for more than a decade?
 
-**SQL techniques demonstrated:**
+### SQL techniques
 
 - `INNER JOIN`
 - Date conversion
@@ -90,17 +110,23 @@ Questions explored include:
 - Date calculations
 - Filtering and sorting
 
-### 4. Player Comparison Analysis
+### Result
 
-This section compares player characteristics and examines changes over time.
+![Player Career Analysis](screenshots/player_career_analysis.png)
 
-Questions explored include:
+---
+
+## 4. Player Comparison Analysis
+
+This analysis compares player characteristics and examines changes over time.
+
+### Questions explored
 
 - Which players shared the same birthday?
 - What percentage of players on each team batted right-handed, left-handed, or both?
 - How did average player height and weight at debut change across decades?
 
-**SQL techniques demonstrated:**
+### SQL techniques
 
 - Common Table Expressions (CTEs)
 - `CASE`
@@ -109,6 +135,12 @@ Questions explored include:
 - `LAG()`
 - Window functions
 - Date functions
+
+### Result
+
+![Player Comparison Analysis](screenshots/player_comparison_analysis.png)
+
+---
 
 ## SQL Skills Demonstrated
 
@@ -130,4 +162,6 @@ This project provided practical experience working with:
 
 ## Project Takeaway
 
-This project strengthened my ability to use SQL to explore relational data, perform multi-step analysis, and apply advanced querying techniques to answer analytical questions.
+This project strengthened my ability to use SQL to explore relational data, perform multi-step analysis, and apply analytical SQL techniques to answer different types of questions.
+
+It also provided practical experience working across multiple related datasets rather than analyzing a single table in isolation.
